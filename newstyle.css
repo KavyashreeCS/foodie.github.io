@@ -1,0 +1,270 @@
+* css program for online_meal *
+
+{
+	margin: 0;
+	padding: 0;
+	font-family: Bree Serif, serif;
+	box-sizing: border-box;
+}
+h1{
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 60px;
+}
+h3{
+	font-size: 35px;
+}
+
+nav{
+	display: flex;
+	background: rgba(0, 0, 0, 0.7);
+	color: white;
+	align-items: center;
+	padding: 20px;
+	position: fixed;
+	width:  100%;
+	z-index: 1;
+}
+nav img{
+	height: 50px;
+	width: 50px;
+	border-radius: 9999px;
+	/*padding-inline: 30px;*/
+}
+nav ul{
+	list-style-type: none;
+	display: flex;
+	align-items: center;
+	font-weight: bold;
+}
+
+nav a{
+	text-decoration: none;
+	color: rgb(250, 230, 230);
+	padding:  10px 24px;
+	margin: 10px;
+	display: block;
+}
+nav a:hover{
+	background: white;
+	color: black;
+	border-radius: 20px;
+	text-align: center;
+}
+@media screen and (max-width: 700px){
+	nav{
+		flex-direction: column;
+		padding: 0;
+	}
+
+	nav img{
+		height: 86px;
+            width: 109px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-inline: 20px;
+	}
+
+	nav a{
+		padding: 5px;
+		margin: 5px;
+	}
+}
+
+.Home{
+	display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 500px;
+      color: white;
+      padding-top: 100px;
+      position: relative;
+}
+.Home::before{
+	 content: '';
+	 position: absolute;
+	 background: url(bg1.jpg);
+       background-size: cover;
+       background-repeat: no-repeat;
+       background-position: center;
+       top: 0; 
+       left: 0;
+       width: 100%;
+       height: 100%;
+       z-index: -1;
+}
+
+.Home p{
+	padding-top: 15px;
+	padding-bottom: 10px;
+	width: 50%;
+	text-align: center;
+}
+.Home button{
+	background: rgba(20, 180 , 20, 0.7);
+	padding: 5px 15px;
+	color: white;
+	border: 1px solid rgb(237, 232, 232);
+	border-radius: 10px;
+	opacity: 0.9;
+}
+
+.Services{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.offered-services{
+	display: flex;
+}
+.service{
+	display: flex;
+	flex-direction: column;
+	border: 3px solid brown;
+	border-radius: 28px;
+	justify-content: space-evenly;
+	align-items: center;
+	padding: 15px;
+	margin-inline: 55px;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	flex: 1 1 1;
+	flex-basis: 100%;
+	height: auto;
+	/*max-width: 300px;*/
+	background: #f2f2f2;
+	padding: 34px;
+}
+
+.service p{
+	text-align: center;
+	padding-inline: 20px;
+}
+.service img{
+	height: 90px;
+	width: 100px;
+}
+.service h3{
+	text-align: center;
+	color: black;
+	padding: 10px;
+}
+@media screen and (max-width: 700px){
+	.offered-services{
+		flex-direction: column;
+	}
+	.service{
+		margin-inline: 25px;
+	}
+	.Home{
+		padding-top: 150px;
+		height: auto;
+		background-position: left;
+		padding-bottom: 20px;
+	}
+	.Home h1{
+		font-size: 50px;
+		padding-inline: 15px;
+	}
+	.Home p{
+		width: 75%;
+	}
+
+}
+.Our-Clients::before{
+              content: "";
+              position: absolute;
+              background: url('bg.jpg');
+              background-size: auto;
+              width: 100%;
+              height: 100%;
+              z-index: -1;
+              opacity: 0.7;
+              left: 0;
+}
+
+.clients{
+	       display: flex;
+	       justify-content: center;
+	       margin-bottom: 20px;
+}
+.clients img{
+	      height: 80px;
+	      width: 80px;
+	      padding: 15px 20px;
+}
+@media screen and (max-width: 700px){
+	
+.Our-Clients{
+		height: auto;
+	}
+	.clients{
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+
+.contact{
+	     background: url("contact.jpg");
+	     backdrop-filter: blur(10px);
+	     background-size: 100% 100%;
+	     width: 100%;
+}
+
+form{
+	     margin-left: 30%;
+}
+
+textarea{
+	     width: 60%;
+	     border: 1px solid lightgray;
+	     border-radius: 5px;
+	     padding: 5px;
+}
+form input{
+	    border: 1px solid lightgray;
+	    border-radius: 5px;
+          padding: 5px;
+	/*text-align: center;*/
+	    width: 60%;
+}
+input[type="submit"]{
+	    background: rgba(0, 200, 0, 0.6);
+	    color: white;
+	    width: 60%;
+	    box-sizing: border-box;
+}
+@media screen and (max-width: 700px){
+	    input[type="submit"]
+{
+	    background: rgba(200, 0, 0, 0.6);
+	    color: white;
+	    width: 60%;
+	    box-sizing: border-box;
+}
+}
+
+footer{
+	      background: black;
+	      width: 100%;
+	      color: white;
+	      text-align: center;
+	      padding-top: 5px;
+	      padding-bottom: 5px;
+}
+@media screen and (max-width: 700px){
+	footer{
+		 padding: 15px 0;
+	}
+}
+
+button:hover{
+	      background: rgba(230, 20, 20, 0.7);
+}
+input[type="submit"]:hover{
+	      background: rgba(200, 20, 20, 0.7);
+}
